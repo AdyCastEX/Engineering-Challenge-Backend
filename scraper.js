@@ -29,7 +29,7 @@ var nutritionFactsSchema = new Schema({
 });
 
 var foodSchema = new Schema({
-	_id : {type : Number, required : true},
+	food_id : {type : Number, required : true},
 	food_name : {type : String, required : true},
 	food_company : {type:String,required:false},
 	nutrition_facts : [nutritionFactsSchema]
@@ -379,7 +379,7 @@ var main = function(){
 				}
 				nutritionFacts['_id'] = counter;
 				food = new Food({
-					_id : counter,
+					food_id : counter,
 					food_name : foodName,
 					food_company : foodCompany,
 					nutrition_facts : nutritionFacts
